@@ -94,9 +94,9 @@ class MLPPolicy(BasePolicy, nn.Module, metaclass=abc.ABCMeta):
     # `torch.distributions.Distribution` object. It's up to you!
     def forward(self, observation: torch.FloatTensor) -> Any:    
         if self.discrete:
-            return self.logits_na(ptu.from_numpy(observation))
+            return self.logits_na(observation)
         else:
-            return self.mean_net(ptu.from_numpy(observation))
+            return self.mean_net(observation)
 
 #####################################################
 #####################################################
