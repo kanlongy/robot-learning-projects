@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import re
 import numpy as np
 
-def run_dagger(env_name, expert_file, expert_data, exp_name, n_iter=10):
+def run_dagger(env_name, expert_file, expert_data, exp_name, n_iter=100):
     print(f"\n{'='*60}")
     print(f"Running DAgger on {env_name} for {n_iter} iterations...")
     print('='*60)
